@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<meta HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+		<link rel="stylesheet" href="CSS/agenda.css">
+		<meta charset="UTF-8">
+		<title>Ajouter un TODO</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="agenda.html"><p>Agenda</p></a>
+				<a href="formulaire.html"><p>Ajouter</p></a>
+				<a href="#"><p>Supprimer</p></a>
+			</nav>
+		</header>
+		<main class="form">
+			<form>
+				<label for="name">Titre :</label>
+				<input required type="text" placeholder="Frites" name="title"/>
+				<label for="description">Description :</label>
+				<textarea></textarea>
+				<label>Catégorie :</label>
+				<select>
+					<option>Choisir</option>
+					<option></option>
+					<option>Important</option>
+					<option>Rendez-vous</option>
+					<option>Visio-conférence</option>
+				</select>
+				<label for="date">Date :</label>
+				<input required type="date" name="date"/>
+				<input type="submit" formaction="agenda.html" value="Ajouter"/>
+			</form>
+		</main>
+		<footer>
+			<table id="footer_table_form">
+				<tr>
+					<td class="hours" id="legende"><h1>Légende</h1></td>
+					<td class="important">Important</td>
+					<td class="rdv">Rendez-vous</td>
+					<td class="visio">Visio-conférence</td>
+				</tr>
+			</table>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+body{
+	padding: none;
+	margin: 0;
+	font-family: trebuchet, sans-serif;
+	background-color: #B5B976;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+@font-face{
+	src: url('POLICE/police1.otf');
+	font-family: 'police1';
+}
+
+@keyframes light{
+	0%{background-color: white;}
+	50%{background-color: red;}
+	100%{background-color: white;}
+}
+
+@keyframes float{
+	0%{transform: translateY(-10px); box-shadow: 0 40px 50px black;}
+	100%{transform: translateY(10px); box-shadow: 0 20px 30px black;}
+}
+
+/*HEADER & FOOTER*/
+nav{
+	display: flex;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: black;
+	justify-content: space-evenly;
+	font-weight: bold;
+	z-index: 2;
+}
+	nav a{padding: 0 1vw;}
+		nav a:hover{background-color: gray;}
+		
+#footer_table td{width: 20vw; height: 5vh;}
+
+#footer_table_form{display: flex;}
+#footer_table_form td{width: 15vw; height: 5vh;}
+#footer_table_form tr{position: fixed; bottom: 0;}
+
+/*AGENDA*/
+table{
+	width: 100%;
+	text-align: center;
+	margin-top: 15vh;
+}
+	td, th:not(.void){border: solid 1px black;}
+	th.day:not(.void){background-color: black; color: white; height: 5vh;}
+	td:nth-child(even):not(.important):not(.visio):not(.day):not(.separate){background-color: #F2F4D7; font-family: police1;}
+	td:nth-child(odd):not(.important):not(.visio):not(.day):not(.hours):not(.separate){background-color: #E9F099; font-family: police1;}
+		td:hover:not(.day):not(.separate){opacity: 0.8; cursor: pointer;}
+		td:hover:not(.day):not(.hours):not(.separate){opacity: 0.8; cursor: pointer;}
+		td:not(.day){height: 15vh;}
+	td.hours{color: white; background-color: black;}
+	th.day{width: 12vw;}
+	td.separate{background-color: black; height: 5vh;}
+		.important{background-color: white; animation: light 2s ease-in-out 1s infinite; font-weight: bold;}
+		.rdv{color: blue;}
+		.visio{background-color: green;}
+		
+.week{
+	position: fixed;
+	left: 2vw; top: 10vh;
+	background-color: gray;
+	padding: 1vh 2vw;
+	border-radius: 10px;
+	animation: float 1s ease-in-out 1s infinite alternate;
+	font-weight: bold;
+	border: solid 2px white;
+}
+
+.week:hover{
+	cursor: pointer;
+	color: white;
+	opacity: 0.8;
+}
+		
+/*FORMULAIRE*/
+main.form{
+	display: flex;
+	justify-content: center;
+	height: 80vh;
+	align-items: center;
+}
+	
+form{
+	display: flex;
+	flex-direction: column;
+	width: 20vw;
+	justify-content: center;
+	background-color: black;
+	height: 65vh;
+	padding: 2vh 10vw;
+	color: white;
+	border-radius: 10px;
+	margin-top: 10vh;
+	border: dashed 5px white;
+	box-shadow: 20px 20px 25px black;
+	font-weight: bold;
+}
+
+textarea{height: 10vh;}
+
+input, textarea, select{border: dashed 5px #B5B976; border-radius: 10px;}
+
+input[type="submit"]{
+	margin: 10% 0 0 30%;
+	width: 40%;
+	cursor: pointer;
+}
+
+label{margin-top: 5vh;}
